@@ -1,0 +1,19 @@
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\film arşiv.exe.config
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\film arşiv.exe
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\film arşiv.pdb
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\MySql.Data.dll
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\System.Memory.dll
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\bin\Debug\System.Buffers.dll
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film arşiv.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film arşiv.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film_arşiv.Form1.resources
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film_arşiv.Properties.Resources.resources
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film arşiv.csproj.GenerateResource.cache
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film arşiv.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film arşiv.csproj.CopyComplete
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film arşiv.exe
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film arşiv.pdb
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film_arşiv.FormFilmEkle.resources
+C:\Users\User\Desktop\KORUMASIZ\Yezda Açık\film arşiv\film arşiv\obj\Debug\film_arşiv.FormFilmler.resources
