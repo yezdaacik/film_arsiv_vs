@@ -30,3 +30,20 @@ C:\Users\User\Desktop\Film Uygulama\Film Uygulama\obj\Debug\Film Uygulama.csproj
 C:\Users\User\Desktop\Film Uygulama\Film Uygulama\obj\Debug\Film Uygulama.csproj.CopyComplete
 C:\Users\User\Desktop\Film Uygulama\Film Uygulama\obj\Debug\Film Uygulama.exe
 C:\Users\User\Desktop\Film Uygulama\Film Uygulama\obj\Debug\Film Uygulama.pdb
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\bin\Debug\Film Uygulama.exe.config
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\bin\Debug\Film Uygulama.exe
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\bin\Debug\Film Uygulama.pdb
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\bin\Debug\System.Memory.dll
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\bin\Debug\System.Buffers.dll
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film Uygulama.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film Uygulama.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film_Uygulama.Form1.resources
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film_Uygulama.Properties.Resources.resources
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film Uygulama.csproj.GenerateResource.cache
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film Uygulama.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film Uygulama.csproj.CopyComplete
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film Uygulama.exe
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film Uygulama.pdb
+C:\Users\User\Downloads\film_arsiv_vs-main\Film Uygulama\obj\Debug\Film_Uygulama.FormEkle.resources

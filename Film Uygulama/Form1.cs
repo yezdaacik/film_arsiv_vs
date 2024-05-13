@@ -50,8 +50,10 @@ namespace Film_Uygulama
                 da.Fill(dt);
                 dgwFilmler.DataSource = dt;
 
-               // dgwFilmler.Columns["poster"].Visible = false;
-              
+                dgwFilmler.Columns["yonetmen"].Visible = false;
+                dgwFilmler.Columns["yil"].Visible = false;
+                dgwFilmler.Columns["film_odul"].Visible = false;
+
             }
         }
 
@@ -79,26 +81,26 @@ namespace Film_Uygulama
 
         private void dgwFilmler_SelectionChanged(object sender, EventArgs e)
         {
-            if(dgwFilmler.SelectedRows.Count > 0)
+            if (dgwFilmler.SelectedRows.Count > 0)
             {
                 txtFilmAd.Text = dgwFilmler.SelectedRows[0].Cells["film_ad"].Value.ToString();
                 txtYonetmen.Text = dgwFilmler.SelectedRows[0].Cells["yonetmen"].Value.ToString();
-                txtYil.Text =   dgwFilmler.SelectedRows[0].Cells["yil"].Value.ToString();
+                txtYil.Text = dgwFilmler.SelectedRows[0].Cells["yil"].Value.ToString();
                 txtSure.Text = dgwFilmler.SelectedRows[0].Cells["sure"].Value.ToString();
                 txtPuan.Text = dgwFilmler.SelectedRows[0].Cells["imdb_puan"].Value.ToString();
                 cbOdul.Checked = Convert.ToBoolean(dgwFilmler.SelectedRows[0].Cells["film_odul"].Value);
 
-               // string dosyaYolu = Environment.CurrentDirectory+"\\poster\\"+ dgwFilmler.SelectedRows[0].Cells["poster"].Value.ToString();
+                // string dosyaYolu = Environment.CurrentDirectory+"\\poster\\"+ dgwFilmler.SelectedRows[0].Cells["poster"].Value.ToString();
 
-                cmbTur.SelectedValue = dgwFilmler.SelectedRows[0].Cells["tur"].Value.ToString() ;
+                cmbTur.SelectedValue = dgwFilmler.SelectedRows[0].Cells["tur"].Value.ToString();
 
                 string dosyaYolu = Path.Combine(Environment.CurrentDirectory, "poster", dgwFilmler.SelectedRows[0].Cells["poster"].Value.ToString());
 
-                pbResim.Image = null;
+                pbResim.ImageLocation = null;
 
                 if (File.Exists(dosyaYolu))
                 {
-                    pbResim.Image = Image.FromFile(dosyaYolu);
+                    pbResim.ImageLocation = dosyaYolu;
                     pbResim.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
 
@@ -118,8 +120,8 @@ namespace Film_Uygulama
                     cmd.Parameters.AddWithValue("@film_ad", txtFilmAd.Text);
                     cmd.Parameters.AddWithValue("@yonetmen", txtYonetmen.Text);
                     cmd.Parameters.AddWithValue("@yil", txtYil.Text);
-                    cmd.Parameters.AddWithValue("@tur", cmbTur.SelectedValue);                 
-                    cmd.Parameters.AddWithValue("@sure", txtSure.Text);               
+                    cmd.Parameters.AddWithValue("@tur", cmbTur.SelectedValue);
+                    cmd.Parameters.AddWithValue("@sure", txtSure.Text);
                     cmd.Parameters.AddWithValue("@imdb_puan", txtPuan.Text);
                     cmd.Parameters.AddWithValue("@film_odul", cbOdul.Checked);
                     cmd.Parameters.AddWithValue("@poster", yeniAd);
@@ -161,25 +163,46 @@ namespace Film_Uygulama
 
         private void btnEkleForm_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection baglan = new MySqlConnection(baglanti))
-            {
-                baglan.Open();
-                string sorgu = "INSERT INTO filmler VALUES(NULL,@film_ad,@yonetmen,@yil,@tur,@sure,@poster,@imdb_puan,@film_odul);";
-                MySqlCommand cmd = new MySqlCommand(sorgu, baglan);
-                cmd.Parameters.AddWithValue("@film_ad", txtFilmAd.Text);
-                cmd.Parameters.AddWithValue("@yonetmen", txtYonetmen.Text);
-                cmd.Parameters.AddWithValue("@yil", txtYil.Text);
-                cmd.Parameters.AddWithValue("@tur", cmbTur.SelectedValue);
-                cmd.Parameters.AddWithValue("@sure", txtSure.Text);
-                cmd.Parameters.AddWithValue("@poster", yeniAd);
-                cmd.Parameters.AddWithValue("@imdb_puan", txtPuan.Text);
-                cmd.Parameters.AddWithValue("@film_odul", cbOdul.Checked);
+            FormEkle formEkle = new FormEkle();
+            formEkle.ShowDialog();
+            DgwDoldur();
+        }
 
-                if (cmd.ExecuteNonQuery() > 0)
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dr = dgwFilmler.SelectedRows[0];
+
+            int id = Convert.ToInt32(dr.Cells[0].Value);
+
+            string posterYol = Path.Combine(Environment.CurrentDirectory, "poster", dgwFilmler.SelectedRows[0].Cells["poster"].Value.ToString());
+
+
+            DialogResult cevap = MessageBox.Show("Filmi silmek istediğinizden emin misiniz?",
+                                                 "Filmi sil", MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Warning);
+
+
+            if (cevap == DialogResult.Yes)
+            {
+
+                using (MySqlConnection baglan = new MySqlConnection(baglanti))
                 {
-                    MessageBox.Show("Kayıt Eklendi");
+                    int film_id = Convert.ToInt32(dgwFilmler.SelectedRows[0].Cells["film_id"].Value);
+                    baglan.Open();
+                    string sorgu = "DELETE FROM filmler WHERE film_id=@film_id;";
+                    MySqlCommand cmd = new MySqlCommand(sorgu, baglan);
+                    cmd.Parameters.AddWithValue("@film_id", film_id);
+                    cmd.ExecuteNonQuery();
+
+
+                    if (File.Exists(posterYol))
+                    {
+
+                        File.Delete(posterYol);
+                    }
+                    DgwDoldur();
                 }
             }
         }
     }
-}
+} 

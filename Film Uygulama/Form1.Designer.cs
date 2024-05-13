@@ -48,7 +48,6 @@
             this.btnEkleForm = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFilmler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).BeginInit();
             this.SuspendLayout();
@@ -203,48 +202,39 @@
             // 
             // btnEkleForm
             // 
+            this.btnEkleForm.Image = global::Film_Uygulama.Properties.Resources._004_more;
             this.btnEkleForm.Location = new System.Drawing.Point(598, 27);
             this.btnEkleForm.Name = "btnEkleForm";
             this.btnEkleForm.Size = new System.Drawing.Size(156, 66);
             this.btnEkleForm.TabIndex = 18;
-            this.btnEkleForm.Text = "Film Ekle";
             this.btnEkleForm.UseVisualStyleBackColor = true;
             this.btnEkleForm.Click += new System.EventHandler(this.btnEkleForm_Click);
             // 
             // btnGuncelle
             // 
+            this.btnGuncelle.Image = global::Film_Uygulama.Properties.Resources._006_refresh_1;
             this.btnGuncelle.Location = new System.Drawing.Point(598, 108);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(156, 66);
             this.btnGuncelle.TabIndex = 19;
-            this.btnGuncelle.Text = "Film Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnSil
             // 
+            this.btnSil.Image = global::Film_Uygulama.Properties.Resources._005_trash;
             this.btnSil.Location = new System.Drawing.Point(599, 197);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(156, 66);
             this.btnSil.TabIndex = 20;
-            this.btnSil.Text = "Film Sil";
             this.btnSil.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(679, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 45);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 608);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnEkleForm);
@@ -297,7 +287,6 @@
         private System.Windows.Forms.Button btnEkleForm;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
-        private System.Windows.Forms.Button button1;
     }
 }
 
